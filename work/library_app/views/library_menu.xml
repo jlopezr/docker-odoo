@@ -1,0 +1,5 @@
+
+<odoo> 
+    <!-- Library App Menu -->
+    <menuitem id="menu_library" name="Library" /> 
+</odoo>
