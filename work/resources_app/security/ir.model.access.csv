@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_resource_user,ResourceUser,model_resources_resource,resources_group_user,1,1,1,0
+access_resource_manager,ResourceManager,model_resources_resource,resources_group_manager,1,1,1,1
+access_keyword_user,KeywordUser,model_resources_keyword,resources_group_user,1,1,1,0
+access_keyword_manager,KeywordManager,model_resources_keyword,resources_group_manager,1,1,1,1
