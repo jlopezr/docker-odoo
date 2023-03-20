@@ -1,30 +1,117 @@
 <odoo>
     <data>
-<!--
-          <record id="object0" model="resources_app.resources_app">
-            <field name="name">Object 0</field>
-            <field name="value">0</field>
+          <record id="university_1" model="res.partner">
+            <field name="name">Aalto Univerisity</field>
           </record>
 
-          <record id="object1" model="resources_app.resources_app">
-            <field name="name">Object 1</field>
-            <field name="value">10</field>
+          <record id="contact_1" model="res.partner">
+            <field name="name">Jukka TUHKURI</field>
+            <field name="email">icetank@aalto.fi</field>
           </record>
 
-          <record id="object2" model="resources_app.resources_app">
-            <field name="name">Object 2</field>
-            <field name="value">20</field>
+          <record id="contact_2" model="res.partner">
+            <field name="name">Pentti KUJALA</field>
+            <field name="email">icetank@aalto.fi</field>
           </record>
 
-          <record id="object3" model="resources_app.resources_app">
-            <field name="name">Object 3</field>
-            <field name="value">30</field>
+          <record id="contact_3" model="res.partner">
+            <field name="name">Otto PUOLAKKA</field>
+            <field name="email">icetank@aalto.fi</field>
           </record>
 
-          <record id="object4" model="resources_app.resources_app">
-            <field name="name">Object 4</field>
-            <field name="value">40</field>
+          <record id="contact_4" model="res.partner">
+            <field name="name">Veikko JOUSMÄKI</field>
+            <field name="email">ani@aalto.fi</field>
           </record>
--->
+
+          <record id="contact_5" model="res.partner">
+            <field name="name">Ville PULKKI</field>
+            <field name="email">acousticslab@aalto.fi</field>
+          </record>
+
+          <record id="contact_X" model="res.partner">
+            <field name="name">Jukka TUHKURI</field>
+            <field name="email">icetank@aalto.fi</field>
+            <field name="phone">+34 638448614</field>
+          </record>
+
+          <record id="keyword_1" model="resources.keyword">
+            <field name="name">Environment</field>
+          </record>
+
+          <record id="keyword_2" model="resources.keyword">
+            <field name="name">Health Engineering</field>
+          </record>
+
+          <record id="keyword_3" model="resources.keyword">
+            <field name="name">IT</field>
+          </record>
+
+          <record id="keyword_4" model="resources.keyword">
+            <field name="name">Electronics and Telecom</field>
+          </record>
+
+          <record id="resource_1" model="resources.resource">
+            <field name="name">Aalto Ice Tank</field>
+            <field name="description" eval="'Aalto Ice Tank is a multipurpose basin ideally suited for testing ships and other maritime structures in ice
+conditions.
+Aalto University plays a leading role in Finnish and international Arctic technology research and education. Aalto
+Ice Tank, a unique facility originally established in the early 1980s, has been thoroughly renovated and
+upgraded in 2015-2019. The tank is now operational and open for researchers and industrial partners.
+Aalto Ice Tank is a 40 m × 40 m, 2.8-metre deep water basin equipped with a cooling system and equipment to
+produce model-scale sea ice. The model scale ice is fine grained and generated through a spraying process.
+Typical experiments in the tank include resistance, propulsion, and manoeuvring tests of ships in ice, tests on ice loads on marine structures and modelling of natural ice
+formations, such as ice ridges. The facility also enables a wide range of other experiments on the physical phenomena related to sea ice.
+Aalto Ice Tank is unique in the world because of its dimensions and its large width in particular. While the infrastructure is named an ice tank, the facility is
+multifunctional and can be used for open water tests as well. The basin has wave makers that allow research on problems related to ice and waves. Aalto Ice Tank is an
+open access facility and available for use by academic professionals and industrial experts according to our access guidelines and pricing principles.'"/>        
+            <field name="home_partner_institution" ref="university_1" />
+            <field name="contact_person" eval="[(6,0,[ref('contact_4')])]" />
+            <field name="equipment" eval="'Aalto Ice Tank is a 40 m × 40 m, 2.8-metre-deep water basin equipped with a cooling system and equipment to produce model-scale sea ice'"/>
+            <field name="keywords" eval="[(4, ref('keyword_1'))]" />
+            <field name="technical_staff" eval="True" />
+            <field name="booking_system" eval="True" />
+            <field name="remote_access_policy" eval="True" />
+          </record>
+
+          <record id="resource_2" model="resources.resource">
+            <field name="name">Aalto Neuroimaging infrastructure</field>
+            <field name="description" eval="'Aalto NeuroImaging Infrastructure (ANI) is a research-dedicated infrastructure in human neuroimaging. ANI houses four functional
+neuroimaging modalities, navigated transcranial magnetic stimulation (nTMS) at Aalto TMS, functional magnetic resonance imaging
+(fMRI) at Advanced Magnetic Imaging (AMI) Centre, magnetoencephalography (MEG) at MEG Core and Aalto Behavioral Laboratory
+(ABL). The Infrastructure is open for all users'"/>        
+            <field name="home_partner_institution" ref="university_1" />
+            <field name="contact_person" eval="[(6,0,[ref('contact_1'), ref('contact_2'), ref('contact_3')])]" />
+            <field name="equipment" eval="'AMI Centre maintains a research-dedicated 3T-MRI scanner and develops and maintains the related. Typical measurements at AMI Centre include functional and
+structural brain imaging or diffusion tensor imaging.
+MEG Core has a modern 306-channel MEG device (Elekta Neuromag™, Elekta Oy, Helsinki, Finland) in a high-end 3-layered magnetically shielded room (Imedco AG,
+Hägendorf, Switzerland). MEG Core has extremely low magnetic ambient noise level. MEG Core has a wide variety of MEG-compatible stimulators and monitoring
+devices.
+Aalto Behavioural Laboratory (ABL) has various different monitoring and stimulus systems for behavioural studies in controlled environment. The laboratory consists of
+two measurement rooms: a shielded room which is especially intended for EEG and remote eye tracking measurements; and a room for behavioural measurements
+which doesn’t require shielded conditions.
+Aalto TMS laboratory contains top-of-the-line electroencephalography (EEG) and transcranial magnetic stimulation (TMS) systems. TMS Neuronavigation-system with
+two stimulation units and various coils makes numerous TMS and rTMS examination setups possible. 64 ch EEG-system, specially designed for co-registration with TMS,
+can be used to map stimulus responses simultaneously.'"/>
+            <field name="keywords" eval="[(4, ref('keyword_2'))]" />
+            <field name="technical_staff" eval="True" />
+            <field name="booking_system" eval="True" />
+            <field name="remote_access_policy" eval="True" />
+          </record>
+
+          <record id="resource_3" model="resources.resource">
+            <field name="name">Aalto Acoustics Lab</field>
+            <field name="description" eval="'Aalto Acoustics Lab is a multidisciplinary research centre of the Aalto University.
+The research and teaching focus on audio processing and spatial sound technologies.'"/>        
+            <field name="home_partner_institution" ref="university_1" />
+            <field name="contact_person" eval="[(6,0,[ref('contact_5')])]" />
+            <field name="equipment" eval="'The Aalto Acoustics Lab has outstanding facilities for sound-related research, including three anechoic chambers, a listening room, sound-proof listening booths, many
+loudspeakers and headphones, and high-quality microphones and other measurement equipment. '"/>
+            <field name="keywords" eval="[(6,0,[ref('keyword_3'), ref('keyword_4')])]" />
+            <field name="technical_staff" eval="True" />
+            <field name="booking_system" eval="True" />
+            <field name="remote_access_policy" eval="True" />
+          </record>
+
     </data>
 </odoo>

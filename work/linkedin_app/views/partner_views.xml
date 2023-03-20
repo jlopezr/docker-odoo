@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+
+<odoo>
+    <record id="partner_form" model="ir.ui.view">
+         <field name="name">res.partner.form.inherit</field>
+         <field name="model">res.partner</field>
+         <field name="inherit_id" ref="base.view_partner_form"/>
+         <field name="arch" type="xml">
+             <xpath expr="//field[@name='category_id']" position="after">
+                 <field name="linkedin"/>
+                 <label for='linkedin_confirm' string=""/>
+                 <div class="o_row">
+                     <field name="linkedin_confirm"/>
+                     <label for="linkedin_confirm" string="I give permission to use LinkedIn information"/>
+                 </div>
+             </xpath>
+         </field>
+    </record>
+</odoo>
