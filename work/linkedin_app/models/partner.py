@@ -3,9 +3,11 @@
 import base64
 import urllib.request
 import urllib.parse
+import time
+import re
 from odoo import api, fields, models
 from odoo.exceptions import ValidationError
-from google_images_search import GoogleImagesSearch
+from linkedin_api import Linkedin
 
 class ResPartnerInherit(models.Model):
 
@@ -14,31 +16,30 @@ class ResPartnerInherit(models.Model):
     linkedin = fields.Char(string="LinkedIn", widget="url")
     linkedin_confirm = fields.Boolean(string="")
 
-    @api.model 
     def update_partner_image(self):
         if self.linkedin != False:
-            # Set up the Google Images Search API
-            gis = GoogleImagesSearch('AIzaSyCbQYP6MlcqqdEVaJZaGfxVBQ8Ed99cZU4', '57f3b43d93d414785')
+            if not self.is_valid_linkedin_url(self.linkedin):
+                raise ValidationError("LinkedIn profile url not valid")
 
-            # Define the search parameters
-            search_params = {
-                'q': 'media.licdn.com AND ' + urllib.parse.unquote(self.linkedin).split("/in/")[1].strip("/"),
-                'imgType': 'photo'
-            }
+            # Authenticate using any Linkedin account credentials
+            api = Linkedin('argdevelop1@gmail.com', 'ARGTest123')
 
-            # Send the search request and get the results
-            gis.search(search_params=search_params)
-            results = gis.results()
+            # GET a profile
+            profile = api.get_profile(urllib.parse.unquote(self.linkedin).split("/in/")[1].strip("/"))
+
+            image_url = profile['displayPictureUrl'] + profile['img_800_800']
 
             # Get the URL of the first image result
-            if results:
-                first_result = results[0]
-                image_url = first_result.url
+            if image_url:
                 image_data = urllib.request.urlopen(image_url).read()
-                if("media.licdn.com" in image_url):
-                    self.write({
-                        'image_1920': base64.b64encode(image_data),
-                    })
+                self.write({
+                    'image_1920': base64.b64encode(image_data),
+                })
+
+    @api.model 
+    def cron_update_image(self):
+        self.update_partner_image()
+        time.sleep(30)
     
 
     @api.constrains('linkedin', 'linkedin_confirm')
@@ -48,3 +49,7 @@ class ResPartnerInherit(models.Model):
                 raise ValidationError("Please give permissions to use LinkedIn information")
             else:
                 record.update_partner_image()
+
+    def is_valid_linkedin_url(self, url):
+        pattern = re.compile(r'^https?://(?:www\.)?linkedin\.com/(?:in|pub|company)/.*$')
+        return bool(pattern.match(url))
