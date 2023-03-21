@@ -38,9 +38,10 @@ class ResPartnerInherit(models.Model):
 
     @api.model 
     def cron_update_image(self):
-        self.update_partner_image()
-        time.sleep(30)
-    
+        for record in self:
+            if record.linkedin_confirm and record.linkedin:
+                record.update_partner_image()
+                time.sleep(30)
 
     @api.constrains('linkedin', 'linkedin_confirm')
     def _check_linkedin(self):
