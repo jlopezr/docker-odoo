@@ -1,6 +1,5 @@
 from odoo import fields, models
 
-
 class Keyword(models.Model):
     _name = "resources.keyword"
     _description = "Keyword filter"

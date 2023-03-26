@@ -1,0 +1,31 @@
+<odoo>
+    <data>
+        <record id="university_1" model="res.partner">
+        <field name="name">Aalto Univerisity</field>
+        </record>
+
+        <record id="university_2" model="res.partner">
+        <field name="name">INP Grenoble</field>
+        </record>
+
+        <record id="university_3" model="res.partner">
+        <field name="name">KTH</field>
+        </record>
+
+        <record id="university_4" model="res.partner">
+        <field name="name">ULisboa</field>
+        </record>
+
+        <record id="university_5" model="res.partner">
+        <field name="name">PoliTO</field>
+        </record>
+
+        <record id="university_6" model="res.partner">
+        <field name="name">TUDa</field>
+        </record>
+
+        <record id="university_7" model="res.partner">
+        <field name="name">UPC</field>
+        </record>
+    </data>
+</odoo>

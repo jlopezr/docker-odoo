@@ -1,59 +1,8 @@
 <odoo>
     <data>
-          <record id="university_1" model="res.partner">
-            <field name="name">Aalto Univerisity</field>
-          </record>
-
-          <record id="contact_1" model="res.partner">
-            <field name="name">Jukka TUHKURI</field>
-            <field name="email">icetank@aalto.fi</field>
-          </record>
-
-          <record id="contact_2" model="res.partner">
-            <field name="name">Pentti KUJALA</field>
-            <field name="email">icetank@aalto.fi</field>
-          </record>
-
-          <record id="contact_3" model="res.partner">
-            <field name="name">Otto PUOLAKKA</field>
-            <field name="email">icetank@aalto.fi</field>
-          </record>
-
-          <record id="contact_4" model="res.partner">
-            <field name="name">Veikko JOUSMÄKI</field>
-            <field name="email">ani@aalto.fi</field>
-          </record>
-
-          <record id="contact_5" model="res.partner">
-            <field name="name">Ville PULKKI</field>
-            <field name="email">acousticslab@aalto.fi</field>
-          </record>
-
-          <record id="contact_X" model="res.partner">
-            <field name="name">Jukka TUHKURI</field>
-            <field name="email">icetank@aalto.fi</field>
-            <field name="phone">+34 638448614</field>
-          </record>
-
-          <record id="keyword_1" model="resources.keyword">
-            <field name="name">Environment</field>
-          </record>
-
-          <record id="keyword_2" model="resources.keyword">
-            <field name="name">Health Engineering</field>
-          </record>
-
-          <record id="keyword_3" model="resources.keyword">
-            <field name="name">IT</field>
-          </record>
-
-          <record id="keyword_4" model="resources.keyword">
-            <field name="name">Electronics and Telecom</field>
-          </record>
-
-          <record id="resource_1" model="resources.resource">
-            <field name="name">Aalto Ice Tank</field>
-            <field name="description" eval="'Aalto Ice Tank is a multipurpose basin ideally suited for testing ships and other maritime structures in ice
+        <record id="resource_1" model="resources.resource">
+          <field name="name">Aalto Ice Tank</field>
+          <field name="description" eval="'Aalto Ice Tank is a multipurpose basin ideally suited for testing ships and other maritime structures in ice
 conditions.
 Aalto University plays a leading role in Finnish and international Arctic technology research and education. Aalto
 Ice Tank, a unique facility originally established in the early 1980s, has been thoroughly renovated and
@@ -65,24 +14,24 @@ formations, such as ice ridges. The facility also enables a wide range of other 
 Aalto Ice Tank is unique in the world because of its dimensions and its large width in particular. While the infrastructure is named an ice tank, the facility is
 multifunctional and can be used for open water tests as well. The basin has wave makers that allow research on problems related to ice and waves. Aalto Ice Tank is an
 open access facility and available for use by academic professionals and industrial experts according to our access guidelines and pricing principles.'"/>        
-            <field name="home_partner_institution" ref="university_1" />
-            <field name="contact_person" eval="[(6,0,[ref('contact_4')])]" />
-            <field name="equipment" eval="'Aalto Ice Tank is a 40 m × 40 m, 2.8-metre-deep water basin equipped with a cooling system and equipment to produce model-scale sea ice'"/>
-            <field name="keywords" eval="[(4, ref('keyword_1'))]" />
-            <field name="technical_staff" eval="True" />
-            <field name="booking_system" eval="True" />
-            <field name="remote_access_policy" eval="True" />
-          </record>
+          <field name="home_partner_institution" ref="university_1" />
+          <field name="contact_person" eval="[(6,0,[ref('contact_4')])]" />
+          <field name="equipment" eval="'Aalto Ice Tank is a 40 m × 40 m, 2.8-metre-deep water basin equipped with a cooling system and equipment to produce model-scale sea ice'"/>
+          <field name="keywords" eval="[(4, ref('keyword_1'))]" />
+          <field name="technical_staff" eval="True" />
+          <field name="booking_system" eval="True" />
+          <field name="remote_access_policy" eval="True" />
+        </record>
 
-          <record id="resource_2" model="resources.resource">
-            <field name="name">Aalto Neuroimaging infrastructure</field>
-            <field name="description" eval="'Aalto NeuroImaging Infrastructure (ANI) is a research-dedicated infrastructure in human neuroimaging. ANI houses four functional
+        <record id="resource_2" model="resources.resource">
+          <field name="name">Aalto Neuroimaging infrastructure</field>
+          <field name="description" eval="'Aalto NeuroImaging Infrastructure (ANI) is a research-dedicated infrastructure in human neuroimaging. ANI houses four functional
 neuroimaging modalities, navigated transcranial magnetic stimulation (nTMS) at Aalto TMS, functional magnetic resonance imaging
 (fMRI) at Advanced Magnetic Imaging (AMI) Centre, magnetoencephalography (MEG) at MEG Core and Aalto Behavioral Laboratory
 (ABL). The Infrastructure is open for all users'"/>        
-            <field name="home_partner_institution" ref="university_1" />
-            <field name="contact_person" eval="[(6,0,[ref('contact_1'), ref('contact_2'), ref('contact_3')])]" />
-            <field name="equipment" eval="'AMI Centre maintains a research-dedicated 3T-MRI scanner and develops and maintains the related. Typical measurements at AMI Centre include functional and
+          <field name="home_partner_institution" ref="university_1" />
+          <field name="contact_person" eval="[(6,0,[ref('contact_1'), ref('contact_2'), ref('contact_3')])]" />
+          <field name="equipment" eval="'AMI Centre maintains a research-dedicated 3T-MRI scanner and develops and maintains the related. Typical measurements at AMI Centre include functional and
 structural brain imaging or diffusion tensor imaging.
 MEG Core has a modern 306-channel MEG device (Elekta Neuromag™, Elekta Oy, Helsinki, Finland) in a high-end 3-layered magnetically shielded room (Imedco AG,
 Hägendorf, Switzerland). MEG Core has extremely low magnetic ambient noise level. MEG Core has a wide variety of MEG-compatible stimulators and monitoring
@@ -93,25 +42,188 @@ which doesn’t require shielded conditions.
 Aalto TMS laboratory contains top-of-the-line electroencephalography (EEG) and transcranial magnetic stimulation (TMS) systems. TMS Neuronavigation-system with
 two stimulation units and various coils makes numerous TMS and rTMS examination setups possible. 64 ch EEG-system, specially designed for co-registration with TMS,
 can be used to map stimulus responses simultaneously.'"/>
-            <field name="keywords" eval="[(4, ref('keyword_2'))]" />
-            <field name="technical_staff" eval="True" />
-            <field name="booking_system" eval="True" />
-            <field name="remote_access_policy" eval="True" />
-          </record>
+          <field name="keywords" eval="[(4, ref('keyword_2'))]" />
+          <field name="technical_staff" eval="True" />
+          <field name="booking_system" eval="True" />
+          <field name="remote_access_policy" eval="True" />
+          <field name="research_application_theme" eval="[(6,0,[ref('energyApplicationTheme')])]"/>
+        </record>
 
-          <record id="resource_3" model="resources.resource">
-            <field name="name">Aalto Acoustics Lab</field>
-            <field name="description" eval="'Aalto Acoustics Lab is a multidisciplinary research centre of the Aalto University.
+        <record id="resource_3" model="resources.resource">
+          <field name="name">Aalto Acoustics Lab</field>
+          <field name="description" eval="'Aalto Acoustics Lab is a multidisciplinary research centre of the Aalto University.
 The research and teaching focus on audio processing and spatial sound technologies.'"/>        
-            <field name="home_partner_institution" ref="university_1" />
-            <field name="contact_person" eval="[(6,0,[ref('contact_5')])]" />
-            <field name="equipment" eval="'The Aalto Acoustics Lab has outstanding facilities for sound-related research, including three anechoic chambers, a listening room, sound-proof listening booths, many
+          <field name="home_partner_institution" ref="university_1" />
+          <field name="contact_person" eval="[(6,0,[ref('contact_5')])]" />
+          <field name="equipment" eval="'The Aalto Acoustics Lab has outstanding facilities for sound-related research, including three anechoic chambers, a listening room, sound-proof listening booths, many
 loudspeakers and headphones, and high-quality microphones and other measurement equipment. '"/>
-            <field name="keywords" eval="[(6,0,[ref('keyword_3'), ref('keyword_4')])]" />
-            <field name="technical_staff" eval="True" />
-            <field name="booking_system" eval="True" />
-            <field name="remote_access_policy" eval="True" />
-          </record>
+          <field name="keywords" eval="[(6,0,[ref('keyword_3'), ref('keyword_4')])]" />
+          <field name="technical_staff" eval="True" />
+          <field name="booking_system" eval="True" />
+          <field name="remote_access_policy" eval="True" />
+          <field name="research_application_theme" eval="[(6,0,[ref('energyApplicationTheme')])]"/>
+        </record>
+
+        <record id="resource_4" model="resources.resource">
+          <field name="name">Distributed Network Production of Energy (PREDIS)</field>
+          <field name="description" eval="'PREDIS is an innovation and training centre on distributed energy and smart grids. More specifically, it is a demonstration tool on the smart
+management of the energy representing physical energy networks as similar as possible to actual networks. This tool makes it possible to
+connect various modes of decentralised energy production to different uses through an expert monitoring system.
+PREDIS occupies 2,500 m2 in the buildings of the Grenoble INP – Ense3 school of engineering.
+The PREDIS centre was jointly created by Ense3 and G2Elab, and is composed of a set of technological platforms geared towards production, distribution and uses of
+energy, which illustrate the -smart grid- concept and its derivatives, i.e. smart city, district and building.
+The centre focuses on three aspects: training (not listed here), research and valorisation. It is at the heart of major regional and national french projects, which approved
+and/or certified PREDIS : the Renewable Energy cluster, Carnot Institute -Energies du Futur-, and the Tenerrdis competitive cluster.
+This centre has been set up with the cooperation of lecturers and researchers at Grenoble INP, scientific departments of UGA, and CNRS. A large number of partnerships
+are developed at PREDIS with the key players in the energy sector, CEA Grenoble and local authorities.'"/>        
+          <field name="home_partner_institution" ref="university_2" />
+          <field name="contact_person" eval="[(6,0,[ref('contact_6')])]" />
+          <field name="equipment" eval="'• A living lab with 500m2 independent of the rest of the building for
+electricity, heat and air processing, illustrating the smart building concept.
+This allows setting up any regulation strategy, and keep the user inside the
+loop
+• Decentralised energy production and network platform, with various
+sources and loads, which can be associated in several different power
+network topologies
+
+• Supervision applied to energy platform (various available SCADA)
+
+• Real-time simulation with Power Hardware in the Loop platform, using RT-
+Lab system from OPAL-RT (3 multi-cores targets) and two 10 kVA power
+
+interface among various equipment
+• Another OPAL-RT simulator for power electronics converter emulation,
+with a much higher bandwidth, to validate the control strategy before
+realization'"/>
+          <field name="keywords" eval="[(6,0,[ref('keyword_5'), ref('keyword_6'), ref('keyword_7'), ref('keyword_8')])]" />
+          <field name="technical_staff" eval="False" />
+          <field name="booking_system" eval="False" />
+          <field name="remote_access_policy" eval="False" />
+          <field name="research_application_theme" eval="[(6,0,[ref('energyApplicationTheme')])]"/>
+        </record>
+
+        <record id="resource_5" model="resources.resource">
+          <field name="name">Fusion Plasma Device EXTRAP T2R</field>
+          <field name="description" eval="'The EXTRAP T2R device produces a high energy density ionized gas – plasma – utilizing the method of magnetic
+confinement.
+The device has multiple uses – such as research on magnetic confinement fusion, materials research, plasma waste
+treatment, investigation of technical plasma applications and research on space plasmas.'"/>        
+          <field name="home_partner_institution" ref="university_3" />
+          <field name="contact_person" eval="[(6,0,[ref('contact_7')])]" />
+          <field name="equipment" eval="'Fusion plasma device EXTRAP T2R produces a hot and dense plasma that can also be utilized for basic plasma science.
+Device features include:
+• Arrays of active magnetic field coils
+• Probe manipulators for sample insertions
+
+• State-of-the-art plasma instability control system
+• Various plasma diagnostics systems'"/>
+          <field name="keywords" eval="[(6,0,[ref('keyword_9'), ref('keyword_10')])]" />
+          <field name="technical_staff" eval="True" />
+          <field name="booking_system" eval="False" />
+          <field name="remote_access_policy" eval="False" />
+          <field name="research_application_theme" eval="[(6,0,[ref('energyApplicationTheme')])]"/>
+        </record>
+
+        <record id="resource_6" model="resources.resource">
+          <field name="name">Expandable Seafloor Observatory (OBSEA)</field>
+          <field name="description" eval="'OBSEA is a cabled seafloor observatory located 4 km off the Vilanova i la Geltru coast in a fishing protected area. It is connected to the coast by an
+energy and communications mixed cable.
+• Provides an uninterrupted power supply to the scientific instruments.
+• Offers a high bandwidth communication link.
+• Real time data is available and problems encountered in battery powered systems are avoided.
+• An optical Ethernet network that transmits data continuously to marine sensors connected to the observator.'"/>        
+          <field name="home_partner_institution" ref="university_7" />
+          <field name="contact_person" eval="[(6,0,[ref('contact_8')])]" />
+          <field name="equipment" eval="'Underwater laboratory, set up in the Mediterranean ocean with the capacity to install equipment in order to control its durability in the ocean. It also has the option to
+analyse any desired data from the ocean.
+• More information on the structure and available instruments'"/>
+          <field name="keywords" eval="[(6,0,[ref('keyword_11'), ref('keyword_12')])]" />
+          <field name="technical_staff" eval="True" />
+          <field name="booking_system" eval="True" />
+          <field name="remote_access_policy" eval="True" />
+          <field name="research_application_theme" eval="[(6,0,[ref('environmentApplicationTheme')])]"/>
+        </record>
+
+        <record id="resource_7" model="resources.resource">
+          <field name="name">Innovative Health Technology Park (PAsTISs)</field>
+          <field name="description" eval="'The PAsTISs research infrastructure is an inter-university centre for the development of innovative technologies for health and well-being.
+The macro-themes currently addressed are: human-machine interface, diagnostic and therapeutic devices for oncology, ageing and
+frailty, regenerative and tissue engineering, organic/inorganic interaction at the nanoscale, advanced imaging, orthopaedic,
+cardiovascular and dental engineering, prosthetics, implants, fracture synthesis, cryoablation probes, biorobotics and computer-assisted
+surgery, computational drug design, production of medical devices by additive manufacturing.
+Other body involved in the infrastructure: University of Turin.'"/>        
+          <field name="home_partner_institution" ref="university_5" />
+          <field name="contact_person" eval="[(6,0,[ref('contact_9')])]" />
+          <field name="equipment" eval="'PAsTISs@PoliTO is an inter-university centre for the development of innovative technologies for health and well-being. The macro-themes currently addressed are:
+human-machine interface, diagnostic and therapeutic devices for oncology, ageing and frailty, regenerative and tissue engineering, organic/inorganic interaction at the
+nanoscale, advanced imaging, orthopaedic, cardiovascular and dental engineering, prosthetics, implants, fracture synthesis, cryoablation probes, bio-robotics and
+computer-assisted surgery, computational drug design, production of medical devices by additive manufacturing'"/>
+          <field name="keywords" eval="[(6,0,[ref('keyword_13')])]" />
+          <field name="technical_staff" eval="True" />
+          <field name="booking_system" eval="False" />
+          <field name="remote_access_policy" eval="False" />
+          <field name="research_application_theme" eval="[(6,0,[ref('healthEngineeringApplicationTheme')])]"/>
+        </record>
+
+        <record id="resource_8" model="resources.resource">
+          <field name="name">Innovative Health Technology Park (PAsTISs)</field>
+          <field name="description" eval="'The Atomic Force Microscopy and Related Techniques (AFMaRT) Lab is a research laboratory dedicated to the exploration of the Nanoworld.
+Our main area of research is condensed matter physics, including soft matter, molecular biology, fluidics, magnetism, tribology and several other
+domains, at the nanoscale.
+We are part of Biosystems and Integrative Sciences Institute (BioISI), group Bio-PhysNano, allowing us to be involved in several investigations
+coupling different areas of research, where interdisciplinarity is a keyword. Here, the potential of the Atomic Force Microscope (AFM) for probing all sorts of interactions
+plays a central role.'"/>        
+          <field name="home_partner_institution" ref="university_4" />
+          <field name="contact_person" eval="[(6,0,[ref('contact_10')])]" />
+          <field name="equipment" eval="'In the AFMRT lab we have a mixture of conventional, off-the-shelf instruments, with custom-made AFMs: • PicoSPMLE Molecular Imaging System:
+
+Maximum scanner displacements: 80 x 80 x 10 μm
+Conventional AFM capable of performing all the main instrument
+tasks, including molecular resolution imaging (dynamic and contact
+modes), force spectroscopy and MFM, among others.
+
+• Conventional AFM retrofitted with Force Feedback Microscope (FFM)
+capabilities:
+Maximum scanner displacements: 5 x 5 x 2 μm
+
+• Custom-made optical-fibre-based FFM (Viriato), developed in the lab:
+• Maximum Scanner Displacements: 30 x 30 x 10 μm.'"/>
+          <field name="keywords" eval="[(6,0,[ref('keyword_14')])]" />
+          <field name="technical_staff" eval="True" />
+          <field name="booking_system" eval="True" />
+          <field name="remote_access_policy" eval="False" />
+          <field name="research_application_theme" eval="[(6,0,[ref('industry4ApplicationTheme')])]"/>
+        </record>
+
+        <record id="resource_9" model="resources.resource">
+          <field name="name">The Lichtenberg high-performance computer at the TU Darmstadt</field>
+          <field name="description" eval="'The series of Lichtenberg high-performance computers provide computing resources for researchers from academia and public
+research facilities in Germany.
+The multifaceted architecture of the high performance computer allows for flexible and efficient scientific computing, especially for
+computationally intensive applications. The experts of the -Hessischen Komptenzzentrum für Hochleistungsrechnen- (Hessian
+Competence Centre for High Performance Computing) will provide for consultancy and scientific support on using the cluster
+efficiently and hosts various workshops on scientific HPC. The new high-performance computer Lichtenberg II includes large memory
+nodes (1.5 TByte RAM), as well as new -accelerator- systems with dedicated NVIDIA GP-GPUs. Further, an expansion in the form of
+several -DGX A100- systems is currently underway, which will support modern AI research.
+The first expansion stage (including this years expansion) of Lichtenberg II will in future provide its users with a real peak performance of over 3,148 PFlop/s and a total
+of 257 TByte RAM. This also includes a new high-performance storage system with around 4 PByte for data, most of which is operational since 2019. By the end of 2021,
+the Lichtenberg II high-performance computer will be finally extended and completed by its second major expansion stage.
+Furthermore, the new cluster expansion stage not only offers high computing power, but is also operated very energy-efficiently.'"/>        
+          <field name="home_partner_institution" ref="university_6" />
+          <field name="contact_person" eval="[(6,0,[ref('contact_11')])]" />
+          <field name="equipment" eval="'The Lichtenberg Cluster is a tier 2 cluster. Most of the processors are CPU, some accelerators (NVIDIA) are also available.
+The Lichtenberg II Cluster, like its predecessor, is a high-performance computer in the medium performance class (tier 2). It has a heterogeneous architecture including
+large memory nodes, accelerator systems with dedicated NVIDIA GPUs, and several DGX A100 systems to support modern AI research.
+• Applications
+• Tools
+• Libraries
+• Compilers and scripting languages'"/>
+          <field name="keywords" eval="[(6,0,[ref('keyword_4')])]" />
+          <field name="technical_staff" eval="True" />
+          <field name="booking_system" eval="False" />
+          <field name="remote_access_policy" eval="True" />
+          <field name="research_application_theme" eval="[(6,0,[ref('itElectronicsTelecomApplicationTheme')])]"/>
+        </record>
 
     </data>
 </odoo>

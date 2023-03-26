@@ -13,6 +13,7 @@
 "auto_install": True,
 "data": [
 	"views/partner_views.xml",
+    "views/user_views.xml",
     "data/cron.xml"
 ]
 }

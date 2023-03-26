@@ -1,0 +1,23 @@
+<odoo>
+    <data>
+        <record id="energyApplicationTheme" model="resources.application_theme">
+            <field name="name">Energy</field>
+        </record>
+
+        <record id="healthEngineeringApplicationTheme" model="resources.application_theme">
+            <field name="name">Health Engineering</field>
+        </record>
+
+        <record id="itElectronicsTelecomApplicationTheme" model="resources.application_theme">
+            <field name="name">IT, Electornics and Telecom</field>
+        </record>
+
+        <record id="environmentApplicationTheme" model="resources.application_theme">
+            <field name="name">Environment</field>
+        </record>
+
+        <record id="industry4ApplicationTheme" model="resources.application_theme">
+            <field name="name">Industry 4.0</field>
+        </record>
+    </data>
+</odoo>

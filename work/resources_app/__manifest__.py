@@ -9,13 +9,24 @@
     'depends': ['base', 'website'],
     'application': True,
     'category': "Services",
-    "data": [
+    'data': [
         "security/resources_security.xml",
         "security/ir.model.access.csv",
 	    "views/resources_menu.xml",
         "views/resource.xml",
-        "views/resource_web_template.xml",
+        "views/web/resource_web_template.xml",
+        "views/web/resource_web_menu.xml",
         "data/cron.xml",
+        "demo/universities.xml",
+        "demo/themes.xml",
+        "demo/keywords.xml",
+        "demo/contacts.xml",
         "demo/demo.xml"
     ],
+    'assets': {
+        "web.assets_frontend": {
+            "resources_app/static/src/css/resource_web_template.css",
+            "resources_app/static/src/js/resource_web_template.js",
+        }
+    }
 }

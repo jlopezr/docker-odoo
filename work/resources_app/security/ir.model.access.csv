@@ -3,3 +3,5 @@ access_resource_user,ResourceUser,model_resources_resource,resources_group_user,
 access_resource_manager,ResourceManager,model_resources_resource,resources_group_manager,1,1,1,1
 access_keyword_user,KeywordUser,model_resources_keyword,resources_group_user,1,1,1,0
 access_keyword_manager,KeywordManager,model_resources_keyword,resources_group_manager,1,1,1,1
+access_theme_user,ThemeUser,model_resources_application_theme,resources_group_user,1,1,1,0
+access_theme_manager,ThemeManager,model_resources_application_theme,resources_group_manager,1,1,1,1

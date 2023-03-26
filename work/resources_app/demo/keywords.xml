@@ -1,0 +1,61 @@
+<odoo>
+    <data>
+        <record id="keyword_1" model="resources.keyword">
+            <field name="name">Environment</field>
+        </record>
+
+        <record id="keyword_2" model="resources.keyword">
+            <field name="name">Health Engineering</field>
+        </record>
+
+        <record id="keyword_3" model="resources.keyword">
+            <field name="name">IT</field>
+        </record>
+
+        <record id="keyword_4" model="resources.keyword">
+            <field name="name">Electronics and Telecom</field>
+        </record>
+
+        <record id="keyword_5" model="resources.keyword">
+            <field name="name">Renewable energy</field>
+        </record>
+
+        <record id="keyword_6" model="resources.keyword">
+            <field name="name">Smart grids</field>
+        </record>
+
+        <record id="keyword_7" model="resources.keyword">
+            <field name="name">Electrical</field>
+        </record>
+
+        <record id="keyword_8" model="resources.keyword">
+            <field name="name">Living lab</field>
+        </record>
+
+        <record id="keyword_9" model="resources.keyword">
+            <field name="name">Plasma</field>
+        </record>
+
+        <record id="keyword_10" model="resources.keyword">
+            <field name="name">Materials characterisation</field>
+        </record>
+
+        <record id="keyword_11" model="resources.keyword">
+            <field name="name">Observation</field>
+        </record>
+
+        <record id="keyword_12" model="resources.keyword">
+            <field name="name">Modelling of nature</field>
+        </record>
+
+        <record id="keyword_13" model="resources.keyword">
+            <field name="name">Biorobotics</field>
+        </record>
+
+        <record id="keyword_14" model="resources.keyword">
+            <field name="name">Nanomaterials</field>
+        </record>
+
+
+    </data>
+</odoo>

@@ -1,0 +1,58 @@
+<odoo>
+    <data>
+        <record id="contact_1" model="res.partner">
+            <field name="name">Jukka TUHKURI</field>
+            <field name="email">icetank@aalto.fi</field>
+        </record>
+
+        <record id="contact_2" model="res.partner">
+            <field name="name">Pentti KUJALA</field>
+            <field name="email">icetank@aalto.fi</field>
+        </record>
+
+        <record id="contact_3" model="res.partner">
+            <field name="name">Otto PUOLAKKA</field>
+            <field name="email">icetank@aalto.fi</field>
+        </record>
+
+        <record id="contact_4" model="res.partner">
+            <field name="name">Veikko JOUSMÄKI</field>
+            <field name="email">ani@aalto.fi</field>
+        </record>
+
+        <record id="contact_5" model="res.partner">
+            <field name="name">Ville PULKKI</field>
+            <field name="email">acousticslab@aalto.fi</field>
+        </record>
+
+        <record id="contact_6" model="res.partner">
+            <field name="name">Yvon BESANGER (Manager)</field>
+            <field name="email">yvon.besanger@grenoble-inp.fr</field>
+        </record>
+
+        <record id="contact_7" model="res.partner">
+            <field name="name">Per BRUNSELL</field>
+            <field name="email">brunsell@kth.se</field>
+        </record>
+
+        <record id="contact_8" model="res.partner">
+            <field name="name">Joaquín DEL RÍO FERNÁNDEZ (Head of OBSEA)</field>
+            <field name="email">joaquin.del.rio@upc.edu</field>
+        </record>
+
+        <record id="contact_9" model="res.partner">
+            <field name="name">Alberto AUDENINO (Coordinator)</field>
+            <field name="email">alberto.audenino@polito.it</field>
+        </record>
+
+        <record id="contact_10" model="res.partner">
+            <field name="name">Mário Manuel SILVEIRA RODRIGUES (Head)</field>
+            <field name="email">mmrodrigues@ciencias.ulisboa.pt</field>
+        </record>
+
+        <record id="contact_11" model="res.partner">
+            <field name="name">Christian BISCHOF</field>
+            <field name="email">christian.bischof@tu-darmstadt.de</field>
+        </record>
+    </data>
+</odoo>

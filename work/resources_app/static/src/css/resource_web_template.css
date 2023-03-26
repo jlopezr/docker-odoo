@@ -1,0 +1,64 @@
+.list-group-item {
+    background-color: #fffefe;
+}
+
+.title {
+    font-weight: 100;
+}
+
+.title-filter {
+    font-weight: 600;
+}
+
+.card {
+    background-color: #f3f3f3;
+}
+
+.card-title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    margin: 8px;
+}
+
+.row {
+    margin-right: -5px;
+    margin-left: -5px;
+}
+
+.col-md-4 {
+    margin-bottom: 20px;
+    padding-right: 5px;
+    padding-left: 5px;
+}
+
+.filter-card {
+    background-color: #5ba7b7;
+}
+
+.button {
+    border: none;
+    padding: 8px 16px;
+    margin: 4px;
+    cursor: pointer;
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
+  
+.button.selected {
+    background-color: #b2d2d9;
+    color: #10687a;
+}
+
+.button-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.small-btn {
+    width: auto;
+    height: 30px;
+    font-size: 10px;
+    padding: 0px 10px;
+}
