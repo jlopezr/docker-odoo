@@ -1,19 +1,19 @@
 # -*- coding: utf-8 -*-
 {
-"name": "LinkedIn App",
+"name": "LinkedIn Plugin",
+"summary": "Adds a linkedin field in the contacts model and imports the profile picture from the personal account",
 "license": "AGPL-3",
 "description": "Add linkedIn field in Contact and add profile picture from it",
-"author": "Alba Roma",
+"author": "Unite",
 'depends': [
-    "contacts",
-    "base"
+    "base",
+    "contacts"
+    
 ],
-"application": False,
-"installable": True,
-"auto_install": True,
+"application": True,
 "data": [
 	"views/partner_views.xml",
     "views/user_views.xml",
-    "data/cron.xml"
+    "data/cron.xml",
 ]
 }
