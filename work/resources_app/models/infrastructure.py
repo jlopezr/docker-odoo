@@ -3,9 +3,9 @@ from odoo import fields, models, api
 
 _logger = logging.getLogger(__name__)
 
-class resourcesResource(models.Model):
-    _name = "resources.resource"
-    _description = "Resources"
+class resourcesInfrastructure(models.Model):
+    _name = "resources.infrastructure"
+    _description = "Infrastructures"
     name = fields.Char("Name", required=True)
     description = fields.Html(string="Description")
     home_partner_institution = fields.Many2one("res.partner", string="Home partner institution")

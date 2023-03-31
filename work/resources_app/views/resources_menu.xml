@@ -2,11 +2,19 @@
 	<!-- Resources App menu -->
 	<menuitem id="menu_resources" name="Resources" />
 	<!-- Action to open the Resources list --> 
- 	<record id="action_resources_resource" model="ir.actions.act_window">
- 		<field name="name">Resources</field>
- 		<field name="res_model">resources.resource</field>
+ 	<record id="action_resources_infrastructure" model="ir.actions.act_window">
+ 		<field name="name">Infrastructures</field>
+ 		<field name="res_model">resources.infrastructure</field>
  		<field name="view_mode">tree,form</field>
  	</record>
+
+	<record id="action_resources_capacity" model="ir.actions.act_window">
+ 		<field name="name">Capacities</field>
+ 		<field name="res_model">resources.capacity</field>
+ 		<field name="view_mode">tree,form</field>
+ 	</record>
+
  	<!-- Menu item to open the Resources list -->
- 	<menuitem id="menu_resources_resource" name="Resources" parent="menu_resources" action="action_resources_resource"/>
+ 	<menuitem id="menu_resources_infrastructure" name="Infrastructures" parent="menu_resources" action="action_resources_infrastructure"/>
+	<menuitem id="menu_resources_capacity" name="Capacities" parent="menu_resources" action="action_resources_capacity"/>
 </odoo>

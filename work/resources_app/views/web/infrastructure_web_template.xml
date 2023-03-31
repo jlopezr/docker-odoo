@@ -1,7 +1,7 @@
 <odoo>
-    <template id="resource_web_template" name="Resource List">
+    <template id="infrastructure_web_template" name="Resource List">
         <t t-call="website.layout">
-            <t t-set="title">Resources</t>
+            <t t-set="title">Infrastructures</t>
             <div class="container my-5">
                 <h3 class="title">INFRASTRUCTURES AND RESOURCES</h3>
                 <div class="row">

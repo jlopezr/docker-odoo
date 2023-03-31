@@ -1,8 +1,8 @@
 <odoo>
     <data>
-        <record id="website_menu_resources" model="website.menu">
-            <field name="name">Resources</field>
-            <field name="url">/resources/resource</field>
+        <record id="website_menu_infrastructure" model="website.menu">
+            <field name="name">Infrastructures</field>
+            <field name="url">/resources/infrastructure</field>
             <field name="parent_id" ref="website.main_menu"/>
             <field name="sequence" type="int">10</field>
             <field name="new_window" eval="False"/>

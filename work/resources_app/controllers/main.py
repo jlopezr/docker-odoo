@@ -1,9 +1,9 @@
 from odoo import http
 
 class Resources(http.Controller):
-    @http.route("/resources/resource", website=True)
-    def list(self, **kwargs):
-        Resource = http.request.env["resources.resource"]
+    @http.route("/resources/infrastructure", website=True, auth='my_api_key')
+    def list(self, *args, **kwargs):
+        Resource = http.request.env["resources.infrastructure"]
         ApplicationTheme = http.request.env["resources.application_theme"]
         Keyword = http.request.env["resources.keyword"]
         resources = Resource.search([])
@@ -12,8 +12,9 @@ class Resources(http.Controller):
         ])
         applicationThemes = ApplicationTheme.search([])
         keywords = Keyword.search([])
+
         return http.request.render(
-            "resources_app.resource_web_template",
+            "resources_app.infrastructure_web_template",
             {
                 "resources": resources,
                 "themes": applicationThemes,

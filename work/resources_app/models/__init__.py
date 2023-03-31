@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 
-from . import models
-from . import resource
+from . import irhttp
+from . import infrastructure
+from . import capacity
 from . import keyword
 from . import applicationTheme

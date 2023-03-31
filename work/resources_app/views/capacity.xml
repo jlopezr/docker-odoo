@@ -1,11 +1,11 @@
 <?xml version="1.0"?>
 
 <odoo>
-    <record id="view_resources_resource_form" model="ir.ui.view">
-        <field name="name">resources.resource.form</field>
-        <field name="model">resources.resource</field>
+    <record id="view_resources_capacity_form" model="ir.ui.view">
+        <field name="name">resources.capacity.form</field>
+        <field name="model">resources.capacity</field>
         <field name="arch" type="xml">
-            <form string="Resource">
+            <form string="Capacity">
                 <sheet>
                     <group>
                         <div class="oe_title">
@@ -22,19 +22,7 @@
                     </group>
                     <group>
                         <field name="description" placeholder="Description"/>
-                        <field name="equipment"/>
                         <field name="keywords" widget="many2many_tags"/>
-                        <field name="research_application_theme" widget="many2many_tags" options="{'no_create': True}"/>
-                        <field name="technical_staff"/>
-                        <field name="booking_system"/>
-                        <field name="remote_access_policy"/>
-                        <field name="contact_person">
-                            <tree>
-                                <field name="name"/>
-                                <field name="phone"/>
-                                <field name="email"/>
-                            </tree>
-                        </field>
                     </group>
                 </sheet>
             </form>

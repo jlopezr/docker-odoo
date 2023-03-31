@@ -1,6 +1,6 @@
 <odoo>
     <data>
-        <record id="resource_1" model="resources.resource">
+        <record id="infrastructure_1" model="resources.infrastructure">
           <field name="name">Aalto Ice Tank</field>
           <field name="description" eval="'Aalto Ice Tank is a multipurpose basin ideally suited for testing ships and other maritime structures in ice
 conditions.
@@ -23,7 +23,7 @@ open access facility and available for use by academic professionals and industr
           <field name="remote_access_policy" eval="True" />
         </record>
 
-        <record id="resource_2" model="resources.resource">
+        <record id="infrastructure_2" model="resources.infrastructure">
           <field name="name">Aalto Neuroimaging infrastructure</field>
           <field name="description" eval="'Aalto NeuroImaging Infrastructure (ANI) is a research-dedicated infrastructure in human neuroimaging. ANI houses four functional
 neuroimaging modalities, navigated transcranial magnetic stimulation (nTMS) at Aalto TMS, functional magnetic resonance imaging
@@ -49,7 +49,7 @@ can be used to map stimulus responses simultaneously.'"/>
           <field name="research_application_theme" eval="[(6,0,[ref('energyApplicationTheme')])]"/>
         </record>
 
-        <record id="resource_3" model="resources.resource">
+        <record id="infrastructure_3" model="resources.infrastructure">
           <field name="name">Aalto Acoustics Lab</field>
           <field name="description" eval="'Aalto Acoustics Lab is a multidisciplinary research centre of the Aalto University.
 The research and teaching focus on audio processing and spatial sound technologies.'"/>        
@@ -64,7 +64,7 @@ loudspeakers and headphones, and high-quality microphones and other measurement 
           <field name="research_application_theme" eval="[(6,0,[ref('energyApplicationTheme')])]"/>
         </record>
 
-        <record id="resource_4" model="resources.resource">
+        <record id="infrastructure_4" model="resources.infrastructure">
           <field name="name">Distributed Network Production of Energy (PREDIS)</field>
           <field name="description" eval="'PREDIS is an innovation and training centre on distributed energy and smart grids. More specifically, it is a demonstration tool on the smart
 management of the energy representing physical energy networks as similar as possible to actual networks. This tool makes it possible to
@@ -102,7 +102,7 @@ realization'"/>
           <field name="research_application_theme" eval="[(6,0,[ref('energyApplicationTheme')])]"/>
         </record>
 
-        <record id="resource_5" model="resources.resource">
+        <record id="infrastructure_5" model="resources.infrastructure">
           <field name="name">Fusion Plasma Device EXTRAP T2R</field>
           <field name="description" eval="'The EXTRAP T2R device produces a high energy density ionized gas – plasma – utilizing the method of magnetic
 confinement.
@@ -124,7 +124,7 @@ Device features include:
           <field name="research_application_theme" eval="[(6,0,[ref('energyApplicationTheme')])]"/>
         </record>
 
-        <record id="resource_6" model="resources.resource">
+        <record id="infrastructure_6" model="resources.infrastructure">
           <field name="name">Expandable Seafloor Observatory (OBSEA)</field>
           <field name="description" eval="'OBSEA is a cabled seafloor observatory located 4 km off the Vilanova i la Geltru coast in a fishing protected area. It is connected to the coast by an
 energy and communications mixed cable.
@@ -144,7 +144,7 @@ analyse any desired data from the ocean.
           <field name="research_application_theme" eval="[(6,0,[ref('environmentApplicationTheme')])]"/>
         </record>
 
-        <record id="resource_7" model="resources.resource">
+        <record id="infrastructure_7" model="resources.infrastructure">
           <field name="name">Innovative Health Technology Park (PAsTISs)</field>
           <field name="description" eval="'The PAsTISs research infrastructure is an inter-university centre for the development of innovative technologies for health and well-being.
 The macro-themes currently addressed are: human-machine interface, diagnostic and therapeutic devices for oncology, ageing and
@@ -165,7 +165,7 @@ computer-assisted surgery, computational drug design, production of medical devi
           <field name="research_application_theme" eval="[(6,0,[ref('healthEngineeringApplicationTheme')])]"/>
         </record>
 
-        <record id="resource_8" model="resources.resource">
+        <record id="infrastructure_8" model="resources.infrastructure">
           <field name="name">Innovative Health Technology Park (PAsTISs)</field>
           <field name="description" eval="'The Atomic Force Microscopy and Related Techniques (AFMaRT) Lab is a research laboratory dedicated to the exploration of the Nanoworld.
 Our main area of research is condensed matter physics, including soft matter, molecular biology, fluidics, magnetism, tribology and several other
@@ -195,7 +195,7 @@ Maximum scanner displacements: 5 x 5 x 2 μm
           <field name="research_application_theme" eval="[(6,0,[ref('industry4ApplicationTheme')])]"/>
         </record>
 
-        <record id="resource_9" model="resources.resource">
+        <record id="infrastructure_9" model="resources.infrastructure">
           <field name="name">The Lichtenberg high-performance computer at the TU Darmstadt</field>
           <field name="description" eval="'The series of Lichtenberg high-performance computers provide computing resources for researchers from academia and public
 research facilities in Germany.
