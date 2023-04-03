@@ -1,5 +1,5 @@
 <odoo>
-    <template id="infrastructure_web_template" name="Resource List">
+    <template id="infrastructure_web_template" name="infrastructure_web_template">
         <t t-call="website.layout">
             <t t-set="title">Infrastructures</t>
             <div class="container my-5">
@@ -11,7 +11,12 @@
                                 <h5 class="title-filter">Research Application Themes</h5>
                                 <div class="button-container">
                                     <t t-foreach="themes" t-as="theme">
-                                        <button type="button" class="button theme-btn" t-att-data-theme="theme.name"><t t-esc="theme.name"/></button>
+                                        <t t-if="theme.name == selectedTheme">
+                                            <button type="button" class="button filter-btn theme-btn selected" t-att-data-theme="theme.name"><t t-esc="theme.name"/></button>
+                                        </t>
+                                        <t t-if="theme.name != selectedTheme">
+                                            <button type="button" class="button filter-btn theme-btn" t-att-data-theme="theme.name"><t t-esc="theme.name"/></button>
+                                        </t>
                                     </t>
                                 </div>
                             </div>
@@ -23,7 +28,12 @@
                                 <h5 class="title-filter">Keywords</h5>
                                 <div class="button-container">
                                     <t t-foreach="keywords" t-as="keyword">
-                                        <button type="button" class="button keyword-btn small-btn" t-att-data-keyword="keyword.name"><t t-esc="keyword.name"/></button>
+                                        <t t-if="keyword.name == selectedKeywords">
+                                            <button type="button" class="button filter-btn keyword-btn small-btn selected" t-att-data-keyword="keyword.name"><t t-esc="keyword.name"/></button>
+                                        </t>
+                                        <t t-if="keyword.name != selectedKeywords">
+                                            <button type="button" class="button filter-btn keyword-btn small-btn" t-att-data-keyword="keyword.name"><t t-esc="keyword.name"/></button>
+                                        </t>
                                     </t>
                                 </div>
                             </div>
@@ -35,56 +45,21 @@
                                 <h5 class="title-filter">Home partner institution</h5>
                                 <div class="button-container">
                                     <t t-foreach="universities" t-as="university">
-                                        <button type="button" class="button university-btn" t-att-data-university="university.name"><t t-esc="university.name"/></button>
+                                        <t t-if="university.name == selectedUniversity">
+                                            <button type="button" class="button filter-btn university-btn selected" t-att-data-university="university.name"><t t-esc="university.name"/></button>
+                                        </t>
+                                        <t t-if="university.name != selectedUniversity">
+                                            <button type="button" class="button filter-btn university-btn" t-att-data-university="university.name"><t t-esc="university.name"/></button>
+                                        </t>
+                                        
                                     </t>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <t t-foreach="resources" t-as="res">
-                        <div class="col-md-12 resources" 
-                            t-attf-data-keywords="{{ ','.join(keyword.name for keyword in res.keywords) }}"
-                            t-attf-data-themes="{{ ','.join(theme.name for theme in res.research_application_theme) }}"
-                            t-att-data-universities="res.home_partner_institution.display_name"
-                            >
-                            <div class="card mb-4 box-shadow">
-                                <h5 class="card-title title"><t t-esc="res.name"/></h5>
-                                <div class="card-body">
-                                    <p class="card-text"><t t-esc="res.description"/></p>
-                                    <ul class="list-group list-group-flush" >
-                                        <li class="list-group-item"><strong>Equipment: </strong><t t-esc="res.equipment"/></li>
-                                        <li class="list-group-item"><strong>Keywords: </strong><span t-foreach="res.keywords" t-as="keyword"><t t-esc="keyword.name"/><t t-if="not keyword==res.keywords[-1]">, </t></span></li>
-                                        <li class="list-group-item"><strong>Technical Staff: </strong><t t-esc="res.technical_staff"/></li>
-                                        <li class="list-group-item"><strong>Booking System: </strong><t t-esc="res.booking_system"/></li>
-                                        <li class="list-group-item"><strong>Remote Access Policy: </strong><t t-esc="res.remote_access_policy"/></li>
-                                        <li class="list-group-item"><strong>Home Partner Institution: </strong><t t-esc="res.home_partner_institution.display_name"/></li>
-                                        <li class="list-group-item"><strong>Research Application Themes: </strong><span t-foreach="res.research_application_theme" t-as="theme"><t t-esc="theme.name"/><t t-if="not theme==res.research_application_theme[-1]">, </t></span></li>
-                                    </ul>
-                                    <div class="mt-3">
-                                        <strong>Contact Person(s): </strong>
-                                        <table class="table table-sm">
-                                            <thead>
-                                                <tr>
-                                                    <th>Name</th>
-                                                    <th>Phone</th>
-                                                    <th>Email</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <t t-foreach="res.contact_person" t-as="person">
-                                                    <tr>
-                                                        <td><t t-esc="person.name"/></td>
-                                                        <td><t t-esc="person.phone"/></td>
-                                                        <td><t t-esc="person.email"/></td>
-                                                    </tr>
-                                                </t>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </t>
+                </div>
+                <div id="infrastructures-container" class="row">
+                    <t t-call="resources_app.infrastructure_list"/>
                 </div>
             </div>
         </t>

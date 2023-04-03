@@ -1,5 +1,4 @@
-const resources = document.querySelectorAll('.resources');
-
+let resources = document.querySelectorAll('.resources');
 const themeButtons = document.querySelectorAll('.theme-btn');
 const keywordButtons = document.querySelectorAll('.keyword-btn');
 const universityButtons = document.querySelectorAll('.university-btn');
@@ -8,45 +7,72 @@ let selectedTheme = null;
 let selectedKeywords = [];
 let selectedUniversity = null;
 
-resources.forEach((resource) => {
-  const cardTitle = resource.querySelector('.card-title');
-  const cardBody = resource.querySelector('.card-body');
-  cardBody.classList.toggle('d-none');
+let page = 1; 
 
-  cardTitle.addEventListener('click', () => {
-    cardBody.classList.toggle('d-none');
-  });
-});
+function requestInfrastructures() {
+  let data = {
+    'page': page,
+  };
+  if (selectedTheme) {
+    data['theme'] = selectedTheme;
+  }
+  if (selectedKeywords.length > 0) {
+    console.log(selectedKeywords);
+    data['keywords'] = selectedKeywords.join(',');
+  }
+  if (selectedUniversity) {
+    data['university'] = selectedUniversity;
+  }
 
-function renderResources() {
-  const resources = document.querySelectorAll('.resources');
-  resources.forEach(resource => {
-    const keywords = resource.dataset.keywords.split(",");
-    const themes = resource.dataset.themes.split(",");
-    const universities = resource.dataset.universities;
-    console.log(universities);
-    console.log(selectedUniversity);
+  $.ajax({
+    type: "POST",
+    url: "/resources/infrastructure/filtered",
+    data: data,
+    success: function(data) {
 
-    if ((selectedTheme === null || themes.includes(selectedTheme)) && (selectedUniversity === null || universities == selectedUniversity)){
-      if(selectedKeywords.length == 0) {
-        resource.classList.remove('d-none');
-      } else {
-        let found = false; 
-        for(i = 0; i < selectedKeywords.length; i++) {
-          if(keywords.includes(selectedKeywords[i])) {
-            resource.classList.remove('d-none');
-            found = true; 
-          }
-        }
-        if(!found){
-          resource.classList.add('d-none');
-        }
-      }
-    } else {
-      resource.classList.add('d-none');
+      $('#infrastructures-container').html(data);
+      updateFunctions();
+    },
+    error: function(xhr, textStatus, errorThrown) {
+        console.log(textStatus + ': ' + errorThrown);
     }
   });
 }
+
+function updateFunctions() {
+  resources = document.querySelectorAll('.resources');
+
+  resources.forEach((resource) => {
+    const cardTitle = resource.querySelector('.card-title');
+    const cardBody = resource.querySelector('.card-body');
+    cardBody.classList.toggle('d-none');
+  
+    cardTitle.addEventListener('click', () => {
+      cardBody.classList.toggle('d-none');
+    });
+  });
+  
+  $('.left-btn').click(function() {
+    if (page > 1) {
+      page = page - 1;
+      requestInfrastructures();
+    }
+  });
+
+  $('.right-btn').click(function() {
+    if (page < document.querySelector('.products_pager').dataset.max) {
+      page = page + 1;
+      requestInfrastructures();
+    }
+  });
+}
+
+$(document).ready(function() {
+  $('.filter-btn').click(function() {
+    page = 1;
+    requestInfrastructures();
+  });
+});
 
 themeButtons.forEach(button => {
   button.addEventListener('click', () => {
@@ -58,7 +84,6 @@ themeButtons.forEach(button => {
       button.classList.add('selected');
       selectedTheme = button.dataset.theme;
     }
-    renderResources();
   });
 });
 
@@ -71,7 +96,6 @@ keywordButtons.forEach(button => {
       button.classList.add('selected');
       selectedKeywords.push(button.dataset.keyword);
     }
-    renderResources();
   });
 });
 
@@ -85,9 +109,8 @@ universityButtons.forEach(button => {
       button.classList.add('selected');
       selectedUniversity = button.dataset.university;
     }
-    renderResources();
   });
 });
 
-//clear filter options initially
-renderResources();
+//request infrastructures initially
+requestInfrastructures();

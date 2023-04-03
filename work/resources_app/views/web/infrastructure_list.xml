@@ -1,0 +1,53 @@
+<odoo>
+    <template id="infrastructure_list" name="infrastructure_list">
+        <t t-foreach="infrastructures" t-as="res">
+            <div class="col-md-12 resources" 
+                t-attf-data-keywords="{{ ','.join(keyword.name for keyword in res.keywords) }}"
+                t-attf-data-themes="{{ ','.join(theme.name for theme in res.research_application_theme) }}"
+                t-att-data-universities="res.home_partner_institution.display_name"
+                >
+                <div class="card mb-4 box-shadow">
+                    <h5 class="card-title title"><t t-esc="res.name"/></h5>
+                    <div class="card-body">
+                        <p class="card-text"><t t-esc="res.description"/></p>
+                        <ul class="list-group list-group-flush" >
+                            <li class="list-group-item"><strong>Equipment: </strong><t t-esc="res.equipment"/></li>
+                            <li class="list-group-item"><strong>Keywords: </strong><span t-foreach="res.keywords" t-as="keyword"><t t-esc="keyword.name"/><t t-if="not keyword==res.keywords[-1]">, </t></span></li>
+                            <li class="list-group-item"><strong>Technical Staff: </strong><t t-esc="res.technical_staff"/></li>
+                            <li class="list-group-item"><strong>Booking System: </strong><t t-esc="res.booking_system"/></li>
+                            <li class="list-group-item"><strong>Remote Access Policy: </strong><t t-esc="res.remote_access_policy"/></li>
+                            <li class="list-group-item"><strong>Home Partner Institution: </strong><t t-esc="res.home_partner_institution.display_name"/></li>
+                            <li class="list-group-item"><strong>Research Application Themes: </strong><span t-foreach="res.research_application_theme" t-as="theme"><t t-esc="theme.name"/><t t-if="not theme==res.research_application_theme[-1]">, </t></span></li>
+                        </ul>
+                        <div class="mt-3">
+                            <strong>Contact Person(s): </strong>
+                            <table class="table table-sm">
+                                <thead>
+                                    <tr>
+                                        <th>Name</th>
+                                        <th>Phone</th>
+                                        <th>Email</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <t t-foreach="res.contact_person" t-as="person">
+                                        <tr>
+                                            <td><t t-esc="person.name"/></td>
+                                            <td><t t-esc="person.phone"/></td>
+                                            <td><t t-esc="person.email"/></td>
+                                        </tr>
+                                    </t>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </t>
+        <div class="products_pager col-md-12" t-att-data-max="total_items">
+            <button type="button" class="button left-btn">&lt;</button>
+            <span class="page-number"><t t-esc="page"/></span>
+            <button type="button" class="button right-btn">&gt;</button>
+        </div>
+    </template>
+</odoo>

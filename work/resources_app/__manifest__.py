@@ -17,6 +17,7 @@
         "views/capacity.xml",
         "views/web/infrastructure_web_template.xml",
         "views/web/infrastructure_web_menu.xml",
+        "views/web/infrastructure_list.xml",
         "data/cron.xml",
         "demo/universities.xml",
         "demo/themes.xml",
@@ -28,6 +29,7 @@
         "web.assets_frontend": {
             "resources_app/static/src/css/resource_web_template.css",
             "resources_app/static/src/js/resource_web_template.js",
+            
         }
     }
 }
