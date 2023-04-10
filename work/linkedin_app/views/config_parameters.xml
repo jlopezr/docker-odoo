@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+    <data>
+        <record id="default_linkedin_email" model="ir.config_parameter">
+            <field name="key">linkedin_email</field>
+            <field name="value">argdevelop1@gmail.com</field>
+        </record>
+        <record id="default_linkedin_password" model="ir.config_parameter">
+            <field name="key">linkedin_password</field>
+            <field name="value">123!unite</field>
+        </record>
+    </data>
+</odoo>

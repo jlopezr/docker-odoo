@@ -14,6 +14,8 @@
 "data": [
 	"views/partner_views.xml",
     "views/user_views.xml",
+    "views/res_config_settings_view.xml",
+    "views/config_parameters.xml",
     "data/cron.xml",
 ]
 }

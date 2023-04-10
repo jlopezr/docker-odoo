@@ -1,0 +1,45 @@
+<odoo>
+    <data>
+        <record id="action_linkedin_config" model="ir.actions.act_window">
+            <field name="name">Settings</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">res.config.settings</field>
+            <field name="view_mode">form</field>
+            <field name="target">inline</field>
+            <field name="context">{'module' : 'linkedin_app'}</field>
+        </record>
+
+        <record id="cpq_data_config_settings" model="ir.ui.view">
+            <field name="name">res.config.view.inherited.cpq_data</field>
+            <field name="model">res.config.settings</field>
+            <field name="priority" eval="30"/>
+            <field name="inherit_id" ref="base.res_config_settings_view_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//div[hasclass('settings')]" position="inside">
+                    <div class="app_settings_block" data-string="Linkedin"
+                        string="Linkedin" data-key="linkedin_app">
+                        <h2>Linkedin Configuration</h2>
+                        <div class="row mt16 o_settings_container">
+                            <div class="col-12 col-lg-6 o_setting_box">
+                                <div class="o_setting_left_pane"/>
+                                <div class="">
+                                    <div class="text-muted">
+                                        Change the default configuration credentials to use LinkedIn API
+                                    </div>
+                                    <div>
+                                        <label for="linkedin_email">Email:</label>
+                                        <field name="linkedin_email" placeholder="argdevelop1@gmail.com"/>
+                                    </div>
+                                    <div>
+                                        <label for="linkedin_password">Password:</label>
+                                        <field name="linkedin_password" placeholder="123!unite"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

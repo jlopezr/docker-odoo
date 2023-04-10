@@ -22,7 +22,13 @@ class ResPartnerInherit(models.Model):
                 raise ValidationError("LinkedIn profile url not valid")
 
             # Authenticate using any Linkedin account credentials
-            api = Linkedin('argdevelop1@gmail.com', 'ARGTest123')
+            email = self.env['ir.config_parameter'].sudo().get_param('linkedin_email')
+            password = self.env['ir.config_parameter'].sudo().get_param('linkedin_password')
+
+            try:
+                api = Linkedin(email, password)
+            except Exception as e:
+                raise ValidationError("Error authenticating with LinkedIn: %s" % str(e))
 
             # GET a profile
             profile = api.get_profile(urllib.parse.unquote(self.linkedin).split("/in/")[1].strip("/"))
