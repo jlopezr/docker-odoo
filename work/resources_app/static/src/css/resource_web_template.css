@@ -14,11 +14,8 @@
     background-color: #f3f3f3;
 }
 
-.card-title {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: left;
+.card-title-title {
+    display: inline-block;
     margin: 8px;
 }
 
@@ -54,6 +51,16 @@
 .button-container {
     display: flex;
     flex-wrap: wrap;
+}
+
+.button-container-pdf {
+    display: inline-block;
+    width: 50%;
+    text-align: right;
+}
+
+.button-pdf {
+    color: #7dbbc7;
 }
 
 .small-btn {

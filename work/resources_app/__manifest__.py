@@ -23,7 +23,8 @@
         "demo/themes.xml",
         "demo/keywords.xml",
         "demo/contacts.xml",
-        "demo/demo.xml"
+        "demo/demo.xml",
+        "reports/resource_infrastructure_report.xml",
     ],
     'assets': {
         "web.assets_frontend": {

@@ -1,23 +1,19 @@
 <odoo>
-    <template id="infrastructure_list" name="infrastructure_list">
-        <t t-foreach="infrastructures" t-as="res">
-            <div class="col-md-12 resources" 
-                t-attf-data-keywords="{{ ','.join(keyword.name for keyword in res.keywords) }}"
-                t-attf-data-themes="{{ ','.join(theme.name for theme in res.research_application_theme) }}"
-                t-att-data-universities="res.home_partner_institution.display_name"
-                >
-                <div class="card mb-4 box-shadow">
-                    <div class="row card-title">
-                        <div class="col-md-8">
-                            <h5 class="card-title-title"><t t-esc="res.name"/></h5>
-                        </div>
-                        <div class="col-md-4 button-container-pdf">
-                            <a t-attf-href="/report/pdf/resources_app.infrastructure_report/{{res.id}}" target="_blank">
-                                <button type="button" class="btn button-pdf o_website_form_send">PDF</button>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="card-body">
+    <record id="action_resource_infrastructure_report" model="ir.actions.report">
+        <field name="name">Infrastructure</field>
+        <field name="model">resources.infrastructure</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">resources_app.infrastructure_report</field>
+        <field name="binding_model_id" ref="model_resources_infrastructure" />
+        <field name="binding_type">report</field>
+    </record>
+
+    <template id="infrastructure_report">
+        <t t-call="web.html_container">
+            <t t-call="web.external_layout">
+                <t t-foreach="docs" t-as="res">
+                    <div class="page">
+                        <!--Report content-->
                         <p class="card-text"><t t-esc="res.description"/></p>
                         <ul class="list-group list-group-flush" >
                             <li class="list-group-item"><strong>Equipment: </strong><t t-esc="res.equipment"/></li>
@@ -50,13 +46,8 @@
                             </table>
                         </div>
                     </div>
-                </div>
-            </div>
+                </t>
+            </t>
         </t>
-        <div class="products_pager col-md-12" t-att-data-max="total_items">
-            <button type="button" class="button left-btn">&lt;</button>
-            <span class="page-number"><t t-esc="page"/></span>
-            <button type="button" class="button right-btn">&gt;</button>
-        </div>
     </template>
 </odoo>
