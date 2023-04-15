@@ -1,52 +1,81 @@
 <odoo>
+    <record id="paperformat_infrastructure_landscape" model="report.paperformat">
+        <field name="name">A4 Landscape</field>
+        <field name="format">A4</field>
+        <field name="orientation">Landscape</field>
+        <field name="margin_top">10</field>
+        <field name="margin_bottom">20</field>
+        <field name="margin_left">7</field>
+        <field name="margin_right">7</field>
+        <field name="dpi">90</field>
+    </record>
+
     <record id="action_resource_infrastructure_report" model="ir.actions.report">
         <field name="name">Infrastructure</field>
         <field name="model">resources.infrastructure</field>
         <field name="report_type">qweb-pdf</field>
         <field name="report_name">resources_app.infrastructure_report</field>
+        <field name="paperformat_id" ref="paperformat_infrastructure_landscape"/>
         <field name="binding_model_id" ref="model_resources_infrastructure" />
         <field name="binding_type">report</field>
     </record>
 
     <template id="infrastructure_report">
         <t t-call="web.html_container">
-            <t t-call="web.external_layout">
-                <t t-foreach="docs" t-as="res">
-                    <div class="page">
-                        <!--Report content-->
-                        <p class="card-text"><t t-esc="res.description"/></p>
-                        <ul class="list-group list-group-flush" >
-                            <li class="list-group-item"><strong>Equipment: </strong><t t-esc="res.equipment"/></li>
-                            <li class="list-group-item"><strong>Keywords: </strong><span t-foreach="res.keywords" t-as="keyword"><t t-esc="keyword.name"/><t t-if="not keyword==res.keywords[-1]">, </t></span></li>
-                            <li class="list-group-item"><strong>Technical Staff: </strong><t t-esc="res.technical_staff"/></li>
-                            <li class="list-group-item"><strong>Booking System: </strong><t t-esc="res.booking_system"/></li>
-                            <li class="list-group-item"><strong>Remote Access Policy: </strong><t t-esc="res.remote_access_policy"/></li>
-                            <li class="list-group-item"><strong>Home Partner Institution: </strong><t t-esc="res.home_partner_institution.display_name"/></li>
-                            <li class="list-group-item"><strong>Research Application Themes: </strong><span t-foreach="res.research_application_theme" t-as="theme"><t t-esc="theme.name"/><t t-if="not theme==res.research_application_theme[-1]">, </t></span></li>
-                        </ul>
-                        <div class="mt-3">
-                            <strong>Contact Person(s): </strong>
-                            <table class="table table-sm">
-                                <thead>
-                                    <tr>
-                                        <th>Name</th>
-                                        <th>Phone</th>
-                                        <th>Email</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <t t-foreach="res.contact_person" t-as="person">
-                                        <tr>
-                                            <td><t t-esc="person.name"/></td>
-                                            <td><t t-esc="person.phone"/></td>
-                                            <td><t t-esc="person.email"/></td>
-                                        </tr>
-                                    </t>
-                                </tbody>
-                            </table>
+            <t t-foreach="docs" t-as="res">
+                <div class="page">
+                    <style>
+                        .main-title{background-color: #48757e; padding-top: 1px; padding-bottom: 1px; text-align: center; color: white;}
+                        .secondary-title{background-color: #c0d6da; padding-top: 0.5px; padding-bottom: 0.5px; text-align: center; color: #2e535a;}
+                        .secondary-half{width: 49.8%; display: inline-block; text-align: center;}
+                        .table{width: 100%; text-align: center; table-layout: fixed;}
+                        .table th,.table td {width: 33.33%;}
+                    </style>
+                    <!--Report content-->
+                    <div class="col-md-12">
+                        <div class="main-title">
+                            <h2><t t-esc="res.name"/></h2>
                         </div>
+                        <p><t t-esc="res.description"/></p>
+                        <h3 class="secondary-title">Contact Person: </h3>
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Phone</th>
+                                    <th>Email</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <t t-foreach="res.contact_person" t-as="person">
+                                    <tr>
+                                        <td><t t-esc="person.name"/></td>
+                                        <td><t t-esc="person.phone"/></td>
+                                        <td><t t-esc="person.email"/></td>
+                                    </tr>
+                                </t>
+                            </tbody>
+                        </table>
+                        <h3 class="secondary-title">Equipment:</h3>
+                        <p style="text-align:  justify; "><t t-esc="res.equipment"/></p>
+
+
+                        <h3 class="secondary-half secondary-title">Research Application Themes:</h3>
+                        <h3 class="secondary-half secondary-title">Own Technical Staff:</h3>
+                        <p class="secondary-half"><span t-foreach="res.research_application_theme" t-as="theme"><t t-esc="theme.name"/><t t-if="not theme==res.research_application_theme[-1]">, </t></span></p>
+                        <p class="secondary-half"><t t-esc="res.technical_staff"/></p>
+                        
+                        <h3 class="secondary-half secondary-title">Existing Booking System to host external user:</h3>
+                        <h3 class="secondary-half secondary-title">Remote Access Policy:</h3>
+                        <p class="secondary-half"><t t-esc="res.booking_system"/></p>
+                        <p class="secondary-half"><t t-esc="res.remote_access_policy"/></p>
+
+                        <p ><strong>Home Partner Institution: </strong><t t-esc="res.home_partner_institution.display_name"/></p>
                     </div>
-                </t>
+                </div>
+                <div class="footer">
+                    <img src="/resources_app/static/description/reportFooter.png"/>
+                </div>
             </t>
         </t>
     </template>
