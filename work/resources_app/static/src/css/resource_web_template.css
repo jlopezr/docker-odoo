@@ -53,14 +53,22 @@
     flex-wrap: wrap;
 }
 
-.button-container-pdf {
+.button-container-link {
     display: inline-block;
     width: 50%;
     text-align: right;
 }
 
-.button-pdf {
+.button-container-link i:first-child {
+    margin-right: 5px;
     color: #7dbbc7;
+}
+.button-container-link i:first-child:hover {
+    color: #2f8596;
+}
+
+a:hover {
+    text-decoration: none;
 }
 
 .small-btn {

@@ -17,6 +17,7 @@ class resourcesInfrastructure(models.Model):
     remote_access_policy = fields.Boolean(string="Established remote access policy")
     research_application_theme = fields.Many2many('resources.application_theme', string="Research Application Themes", no_create=True)
     image = fields.Binary(string="Image")
+    web_link = fields.Char(string="Website", widget="url")
 
     @api.model 
     def test_cron(self):

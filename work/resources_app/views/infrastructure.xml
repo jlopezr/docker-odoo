@@ -23,6 +23,7 @@
                     <group>
                         <field name="description" placeholder="Description"/>
                         <field name="equipment"/>
+                        <field name="web_link"/>
                         <field name="keywords" widget="many2many_tags"/>
                         <field name="research_application_theme" widget="many2many_tags" options="{'no_create': True}"/>
                         <field name="technical_staff"/>

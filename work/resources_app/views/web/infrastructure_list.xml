@@ -11,9 +11,12 @@
                         <div class="col-md-8">
                             <h5 class="card-title-title"><t t-esc="res.name"/></h5>
                         </div>
-                        <div class="col-md-4 button-container-pdf">
+                        <div class="col-md-4 button-container-link">
                             <a t-attf-href="/report/pdf/resources_app.infrastructure_report/{{res.id}}" target="_blank">
-                                <button type="button" class="btn button-pdf o_website_form_send">PDF</button>
+                             <i class="fa fa-download"></i>
+                            </a>
+                            <a t-if="res.web_link" t-attf-href="{{res.web_link}}" target="_blank">
+                            <i class="fa fa-external-link"></i>
                             </a>
                         </div>
                     </div>

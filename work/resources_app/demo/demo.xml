@@ -17,6 +17,7 @@ open access facility and available for use by academic professionals and industr
           <field name="home_partner_institution" ref="university_1" />
           <field name="contact_person" eval="[(6,0,[ref('contact_4')])]" />
           <field name="equipment" eval="'Aalto Ice Tank is a 40 m × 40 m, 2.8-metre-deep water basin equipped with a cooling system and equipment to produce model-scale sea ice'"/>
+          <field name="web_link" eval="'https://www.aalto.fi/en/research-and-learning-infrastructures/aalto-ice-and-wave-tank'"/>
           <field name="keywords" eval="[(4, ref('keyword_1'))]" />
           <field name="technical_staff" eval="True" />
           <field name="booking_system" eval="True" />
@@ -42,6 +43,7 @@ which doesn’t require shielded conditions.
 Aalto TMS laboratory contains top-of-the-line electroencephalography (EEG) and transcranial magnetic stimulation (TMS) systems. TMS Neuronavigation-system with
 two stimulation units and various coils makes numerous TMS and rTMS examination setups possible. 64 ch EEG-system, specially designed for co-registration with TMS,
 can be used to map stimulus responses simultaneously.'"/>
+          <field name="web_link" eval="'https://www.aalto.fi/en/aalto-neuroimaging-ani-infrastructure'"/>
           <field name="keywords" eval="[(4, ref('keyword_2'))]" />
           <field name="technical_staff" eval="True" />
           <field name="booking_system" eval="True" />
@@ -57,6 +59,7 @@ The research and teaching focus on audio processing and spatial sound technologi
           <field name="contact_person" eval="[(6,0,[ref('contact_5')])]" />
           <field name="equipment" eval="'The Aalto Acoustics Lab has outstanding facilities for sound-related research, including three anechoic chambers, a listening room, sound-proof listening booths, many
 loudspeakers and headphones, and high-quality microphones and other measurement equipment. '"/>
+          <field name="web_link" eval="'https://www.aalto.fi/en/aalto-acoustics-lab'"/>
           <field name="keywords" eval="[(6,0,[ref('keyword_3'), ref('keyword_4')])]" />
           <field name="technical_staff" eval="True" />
           <field name="booking_system" eval="True" />
@@ -95,6 +98,7 @@ interface among various equipment
 • Another OPAL-RT simulator for power electronics converter emulation,
 with a much higher bandwidth, to validate the control strategy before
 realization'"/>
+          <field name="web_link" eval="'https://g2elab.grenoble-inp.fr/en/platforms/predis'"/>
           <field name="keywords" eval="[(6,0,[ref('keyword_5'), ref('keyword_6'), ref('keyword_7'), ref('keyword_8')])]" />
           <field name="technical_staff" eval="False" />
           <field name="booking_system" eval="False" />
