@@ -19,8 +19,3 @@ class resourcesInfrastructure(models.Model):
     image = fields.Binary(string="Image")
     web_link = fields.Char(string="Website", widget="url")
 
-    @api.model 
-    def test_cron(self):
-         _logger.info("My cron job is running")
-        
-
