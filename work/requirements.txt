@@ -1,1 +1,4 @@
 odoo-addon-portal-odoo-debranding==15.0.1.0.0.2
+odoo-addons-oca-project==15.0.20230525.0
+odoo-addons-oca-hr==15.0.20230421.2
+odoo-addons-oca-web==15.0.20230329.0
