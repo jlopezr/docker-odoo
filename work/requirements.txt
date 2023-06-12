@@ -1,4 +1,11 @@
 odoo-addon-portal-odoo-debranding==15.0.1.0.0.2
-odoo-addons-oca-project==15.0.20230525.0
+odoo-addons-oca-crm==15.0.20230421.0
 odoo-addons-oca-hr==15.0.20230421.2
+odoo-addons-oca-partner-contact==15.0.20230331.1
+odoo-addons-oca-project==15.0.20230525.0
+odoo-addons-oca-reporting-engine==15.0.20230318.3
+odoo-addons-oca-server-brand==15.0.20220421.1
+odoo-addons-oca-social==15.0.20230525.0
+odoo-addons-oca-timesheet==15.0.20221206.0
 odoo-addons-oca-web==15.0.20230329.0
+odoo-addons-oca-website==15.0.20230324.0
